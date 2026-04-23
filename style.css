@@ -1,0 +1,36 @@
+/* Layout Strategy */
+.hero {
+  display: grid;
+  grid-template-columns: 40% 60%; /* Blue area takes 40%, image takes 60% */
+  height: 500px;
+  position: relative; /* Essential for the search bar to anchor here */
+}
+
+.hero-blue {
+  background-color: #0000ff; /* The vibrant PAP blue */
+  color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-image {
+  background: url('kitchen.jpg') center/cover;
+}
+
+/* The Overlapping Search Bar */
+.search-bar {
+  position: absolute;
+  bottom: -40px; /* This "pulls" it down so it overlaps the next section */
+  left: 50%;
+  transform: translateX(-50%); /* Centers it perfectly */
+  background: white;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 4px;
+}
